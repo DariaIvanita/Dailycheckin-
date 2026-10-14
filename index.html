@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#fff4f7">
+<title>Our Little Morning Drive 💗</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<section id="welcome" class="screen active">
+ <div class="wrap">
+  <p class="eyebrow">A LITTLE SOMETHING FROM YOUR GIRL 💌</p>
+  <h1>Good morning,<br>handsome.</h1>
+  <p class="sub">Your own little morning drive, made with love. Buckle up, baby. 💗</p>
+  <div class="scene" aria-label="A red sports car cruising along a sunny road">
+   <div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div><div class="hills"></div><div class="road"></div>
+   <div class="car">
+    <svg viewBox="0 0 340 145" role="img" aria-label="Red sports car">
+     <defs><linearGradient id="paint" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff7895"/><stop offset=".45" stop-color="#e52f61"/><stop offset="1" stop-color="#85102f"/></linearGradient><linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5f6ff"/><stop offset="1" stop-color="#34475d"/></linearGradient></defs>
+     <ellipse cx="170" cy="127" rx="150" ry="8" fill="#24202a" opacity=".28"/>
+     <path d="M20 100L30 79Q34 72 54 69L99 62 130 35Q140 26 163 26L222 30Q239 33 254 52L281 69 311 79Q325 84 325 99L321 113 18 113Z" fill="url(#paint)" stroke="#68152e" stroke-width="2"/>
+     <path d="M112 60L139 36Q146 31 163 31L190 32V60Z" fill="url(#glass)" stroke="#353341" stroke-width="3"/><path d="M197 33L219 35Q233 39 247 59H197Z" fill="url(#glass)" stroke="#353341" stroke-width="3"/>
+     <path d="M193 32L194 62" stroke="#353341" stroke-width="4"/><path d="M32 91H305" stroke="#ffb5c8" stroke-width="2"/><path d="M299 81L319 87 322 95 298 92Z" fill="#fff3ca"/><path d="M22 84L43 80 40 91 20 95Z" fill="#ff304c"/>
+     <g class="wheels"><circle cx="82" cy="108" r="25" fill="#19171d"/><circle cx="82" cy="108" r="16" fill="#a9abb4"/><circle cx="82" cy="108" r="10" fill="#454650"/><circle cx="82" cy="108" r="4" fill="#e7e7ec"/></g>
+     <g class="wheels"><circle cx="264" cy="108" r="25" fill="#19171d"/><circle cx="264" cy="108" r="16" fill="#a9abb4"/><circle cx="264" cy="108" r="10" fill="#454650"/><circle cx="264" cy="108" r="4" fill="#e7e7ec"/></g>
+    </svg>
+   </div>
+  </div>
+  <button class="btn" id="startBtn">Start our drive&nbsp; 🚘💗</button>
+  <p class="small">A few little stops, a lot of love.</p>
+ </div>
+</section>
+
+<section id="questionScreen" class="screen">
+ <div class="wrap">
+  <div class="card">
+   <div class="progress"><span id="progressFill"></span></div>
+   <p class="step" id="stepLabel">STOP 1 OF 4</p>
+   <h2 id="questionTitle"></h2>
+   <p class="sub" id="questionSubtitle"></p>
+   <div class="girl-area">
+    <div class="girl happy" id="girl" aria-label="Happy girl"><div class="hair"></div><div class="face"><div class="eyebrows"></div><div class="eyes"><span></span><span></span></div><div class="mouth"></div><div class="blush blush-left"></div><div class="blush blush-right"></div></div><div class="neck"></div><div class="body"></div><div class="heart">♥</div></div>
+    <div class="speech" id="speech" aria-live="polite">I'm listening, baby! 💗</div>
+   </div>
+   <div class="answers" id="answerArea"></div>
+   <p class="response" id="response" aria-live="polite"></p>
+  </div>
+  <p class="small">Just one stop at a time. 💌</p>
+ </div>
+</section>
+
+<section id="finalScreen" class="screen">
+ <div class="wrap"><div class="card">
+  <div class="final-heart">💗</div>
+  <p class="eyebrow">FINAL DESTINATION</p>
+  <h1>You made it,<br>handsome!</h1>
+  <p class="sub">Your morning drive is complete.</p>
+  <div class="girl-area"><div class="speech">I'm so lucky to have you. Sending you kisses! 💋</div></div>
+  <p class="response">Remember to eat, hydrate, rest, and be kind to yourself today. I love you endlessly. ❤️</p>
+  <div class="journal">
+   <label for="foodJournal">🍳 A little food diary</label>
+   <p class="sub" style="text-align:left;margin:0 0 12px">What did you eat today, or what are you planning to eat?</p>
+   <textarea id="foodJournal" placeholder="Eggs, toast, fruit... tell me, baby 💕"></textarea>
+   <button class="btn" id="saveBtn">Save my answer 💌</button>
+   <p class="response" id="saveMessage" aria-live="polite"></p>
+  </div>
+  <p class="sub" style="margin-top:25px">Drink some water, eat properly, and remember that you deserve to feel good. I want you healthy, happy, and here with me for a very, very long time.</p>
+  <h2 style="color:var(--deep)">I love you endlessly. 💋</h2>
+  <button class="btn" id="restartBtn">Let's drive again! 🚘💗</button>
+ </div></div>
+</section>
+</main>
+
+<div id="driveTransition" class="transition" aria-hidden="true">
+ <div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div>
+ <div class="transition-msg" id="transitionMessage">On our way, baby... 💗</div><div class="road"></div>
+ <div class="car">
+  <svg viewBox="0 0 340 145" aria-label="Sports car driving to the next stop">
+   <path d="M20 100L30 79Q34 72 54 69L99 62 130 35Q140 26 163 26L222 30Q239 33 254 52L281 69 311 79Q325 84 325 99L321 113 18 113Z" fill="#e52f61" stroke="#74152e" stroke-width="3"/>
+   <path d="M112 60L139 36Q146 31 163 31L190 32V60Z M197 33L219 35Q233 39 247 59H197Z" fill="#a9d8e8" stroke="#353341" stroke-width="4"/>
+   <g class="wheels"><circle cx="82" cy="108" r="25" fill="#19171d"/><circle cx="82" cy="108" r="14" fill="#bfc0c7"/><circle cx="82" cy="108" r="5" fill="#454650"/></g>
+   <g class="wheels"><circle cx="264" cy="108" r="25" fill="#19171d"/><circle cx="264" cy="108" r="14" fill="#bfc0c7"/><circle cx="264" cy="108" r="5" fill="#454650"/></g>
+   <path d="M299 81L319 87 322 95 298 92" fill="#fff3ca"/>
+  </svg>
+ </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
