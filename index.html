@@ -1,0 +1,1093 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Morning, Handsome ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --red: #ed2339;
+  --pink: #ffb9d0;
+  --blue: #8acbff;
+  --dark: #080b13;
+  --panel: #111725;
+  --white: #f8f8fc;
+  --muted: #a4afc4;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--dark);
+  color: var(--white);
+  font-family: Inter, sans-serif;
+  overflow-x: hidden;
+}
+
+button, textarea { font: inherit; }
+button { cursor: pointer; }
+
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 10% 15%, #ed233925, transparent 40%),
+    radial-gradient(ellipse at 90% 70%, #399fff18, transparent 40%);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 7%;
+  border-bottom: 1px solid #ffffff12;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.brand { color: var(--red); }
+.nav-right { color: var(--muted); }
+
+.page {
+  width: min(1050px, 90%);
+  margin: auto;
+}
+
+.hero {
+  padding: 65px 0 20px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--pink);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 20px 0 12px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.08;
+}
+
+h1 span {
+  color: var(--pink);
+  font-style: italic;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.car-wrap {
+  position: relative;
+  margin: 35px auto 25px;
+  max-width: 850px;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid #ffffff18;
+  background: #101624;
+}
+
+.car-wrap img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  object-position: center 58%;
+  -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+}
+
+.car-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 22px;
+  text-align: left;
+}
+
+.car-caption strong {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.car-caption small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.cta {
+  border: 0;
+  padding: 16px 24px;
+  border-radius: 5px;
+  background: var(--red);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  transition: .2s;
+}
+
+.cta:hover {
+  background: #ff4054;
+  transform: translateY(-2px);
+}
+
+.section {
+  margin: 50px 0;
+  padding: 30px;
+  border: 1px solid #ffffff14;
+  border-radius: 14px;
+  background: linear-gradient(140deg, #151c2b, #0c101a);
+  scroll-margin-top: 25px;
+}
+
+.section-top {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 25px;
+}
+
+.number {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: var(--red);
+  border: 1px solid #ed233966;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+h2 {
+  margin: 0;
+  font-size: 21px;
+  letter-spacing: -.5px;
+}
+
+.description {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.question {
+  margin: 20px 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(25px, 4vw, 36px);
+}
+
+.answers {
+  display: flex;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.answer {
+  flex: 1;
+  min-height: 55px;
+  border: 1px solid #ffffff25;
+  border-radius: 7px;
+  background: #ffffff06;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: .2s;
+}
+
+.answer.yes:hover,
+.answer.yes.selected {
+  border-color: var(--pink);
+  background: #ffb9d01c;
+  color: var(--pink);
+}
+
+.answer.no:hover,
+.answer.no.selected {
+  border-color: var(--red);
+  background: #ed23391c;
+  color: #ff6172;
+}
+
+/* CARTOON GIRL */
+
+.girl-card {
+  display: none;
+  grid-template-columns: 135px 1fr;
+  gap: 22px;
+  align-items: center;
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ffffff16;
+  overflow: hidden;
+  animation: appear .35s ease;
+}
+
+.girl-card.visible { display: grid; }
+.girl-card.happy { background: #ffb9d00b; }
+.girl-card.angry { background: #ed233910; }
+
+.avatar {
+  position: relative;
+  width: 135px;
+  height: 180px;
+  flex-shrink: 0;
+  animation: girlEnter .55s ease both;
+}
+
+.face {
+  position: absolute;
+  width: 83px;
+  height: 100px;
+  left: 26px;
+  top: 24px;
+  z-index: 3;
+  border-radius: 46% 46% 45% 45%;
+  background: linear-gradient(135deg, #ffe0c4, #f5bd99);
+  border: 2px solid #c9886d;
+  box-shadow: inset -5px -3px 0 #e8a98955;
+  transition: background .25s;
+}
+
+.hair {
+  position: absolute;
+  z-index: 2;
+  width: 103px;
+  height: 122px;
+  top: 12px;
+  left: 16px;
+  border-radius: 48% 48% 35% 35%;
+  background: linear-gradient(100deg, #a86a24, #f8d77d 45%, #c28a36);
+  box-shadow: inset -8px 0 #8f5925;
+}
+
+.hair::before,
+.hair::after {
+  content: "";
+  position: absolute;
+  top: 48px;
+  width: 23px;
+  height: 77px;
+  background: linear-gradient(90deg, #d6a34c, #f7d37a);
+}
+
+.hair::before {
+  left: 0;
+  border-radius: 10px 0 16px 20px;
+  transform: rotate(5deg);
+}
+
+.hair::after {
+  right: 0;
+  border-radius: 0 10px 20px 16px;
+  transform: rotate(-5deg);
+}
+
+.bangs {
+  position: absolute;
+  z-index: 5;
+  width: 80px;
+  height: 35px;
+  top: -2px;
+  left: 0;
+  border-radius: 50% 50% 35% 35%;
+  background: linear-gradient(90deg, #d3a14d, #f8d77d, #c28a36);
+  clip-path: polygon(
+    0 0, 100% 0, 96% 55%, 82% 85%,
+    70% 50%, 56% 100%, 44% 55%,
+    29% 90%, 14% 55%, 0 80%
+  );
+}
+
+.eyebrows {
+  position: absolute;
+  top: 34px;
+  left: 15px;
+  width: 53px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eyebrows span {
+  width: 17px;
+  height: 4px;
+  border-radius: 50%;
+  background: #704326;
+  transition: .25s;
+}
+
+.eyes {
+  position: absolute;
+  top: 44px;
+  left: 15px;
+  display: flex;
+  gap: 20px;
+}
+
+.eyes span {
+  position: relative;
+  width: 12px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #744936;
+  transition: .25s;
+}
+
+.eyes span::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 9px;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+  background: #6b4937;
+}
+
+.blush {
+  position: absolute;
+  top: 60px;
+  width: 16px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f58f9c;
+  opacity: .8;
+  transition: .25s;
+}
+
+.blush-left { left: 5px; }
+.blush-right { right: 5px; }
+
+.mouth {
+  position: absolute;
+  top: 70px;
+  left: 29px;
+  width: 24px;
+  height: 10px;
+  border-bottom: 3px solid #a94753;
+  border-radius: 0 0 50% 50%;
+  transition: .25s;
+}
+
+.neck {
+  position: absolute;
+  top: 112px;
+  left: 54px;
+  z-index: 1;
+  width: 28px;
+  height: 25px;
+  background: #f5c09f;
+}
+
+.body {
+  position: absolute;
+  z-index: 2;
+  top: 128px;
+  left: 22px;
+  width: 91px;
+  height: 52px;
+  border-radius: 35px 35px 8px 8px;
+  background: linear-gradient(135deg, #ffb9d0, #ed426a);
+  border: 2px solid #f58eaf;
+}
+
+.body::after {
+  content: "♥";
+  position: absolute;
+  top: 10px;
+  left: 37px;
+  color: white;
+  font-size: 15px;
+}
+
+.sparkle,
+.anger-symbol {
+  position: absolute;
+  z-index: 6;
+  right: -2px;
+  top: 20px;
+  font-size: 24px;
+}
+
+.sparkle {
+  color: #ff85bb;
+  animation: sparkle 1.2s ease-in-out infinite alternate;
+}
+
+.anger-symbol {
+  display: none;
+}
+
+/* HAPPY EXPRESSION */
+
+.happy-avatar .face {
+  animation: happyBob 2s ease-in-out infinite;
+}
+
+.happy-avatar .mouth {
+  top: 67px;
+  height: 15px;
+  width: 29px;
+  left: 26px;
+  background: #c94e62;
+  border: 2px solid #a94753;
+  border-radius: 5px 5px 50% 50%;
+}
+
+.happy-avatar .eyes span {
+  animation: happyBlink 4s infinite;
+}
+
+/* ANGRY EXPRESSION */
+
+.angry-avatar {
+  animation: angryShake .35s ease-in-out 3;
+}
+
+.angry-avatar .face {
+  background: linear-gradient(135deg, #ffdec4, #f5b391);
+}
+
+.angry-avatar .eyebrows span:first-child {
+  transform: rotate(25deg) translateY(3px);
+  transform-origin: right center;
+}
+
+.angry-avatar .eyebrows span:last-child {
+  transform: rotate(-25deg) translateY(3px);
+  transform-origin: left center;
+}
+
+.angry-avatar .mouth {
+  top: 76px;
+  left: 30px;
+  width: 23px;
+  height: 9px;
+  background: #a94753;
+  border: 0;
+  border-top: 3px solid #8e3544;
+  border-radius: 50% 50% 0 0;
+}
+
+.angry-avatar .blush {
+  background: #ff5a62;
+  opacity: 1;
+}
+
+.angry-avatar .anger-symbol {
+  display: block;
+  animation: angerPop .4s ease-in-out infinite alternate;
+}
+
+.angry-avatar .sparkle { display: none; }
+
+.girl-message { min-width: 0; }
+
+.mood {
+  margin-bottom: 12px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.happy .mood { color: var(--pink); }
+.angry .mood { color: #ff6172; }
+
+.girl-card h3 {
+  margin: 0 0 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+}
+
+.girl-card p {
+  margin: 0;
+  color: #c3cada;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* BREAKFAST JOURNAL */
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 115px;
+  margin: 15px 0;
+  padding: 17px;
+  border: 1px solid #ffffff20;
+  border-radius: 8px;
+  outline: none;
+  resize: vertical;
+  background: #090d16;
+  color: white;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+textarea:focus { border-color: var(--blue); }
+textarea::placeholder { color: #69758b; }
+
+.status {
+  min-height: 20px;
+  color: var(--blue);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.blue { color: var(--blue); }
+
+/* BREATHING EXERCISE */
+
+.breath-card {
+  text-align: center;
+  padding: 28px 12px;
+}
+
+.breath-circle {
+  display: grid;
+  place-items: center;
+  width: 115px;
+  height: 115px;
+  margin: 25px auto;
+  border-radius: 50%;
+  border: 1px solid #8acbff77;
+  color: var(--blue);
+  background: #8acbff0c;
+  box-shadow: 0 0 50px #8acbff0d;
+  transition: transform 4s ease-in-out;
+}
+
+.breath-circle.breathe { transform: scale(1.22); }
+
+.breath-circle span {
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.reminder {
+  max-width: 540px;
+  margin: 20px auto;
+  color: #e0e5ef;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(20px, 3vw, 28px);
+  line-height: 1.7;
+}
+
+/* LOVE MESSAGE */
+
+.final-love {
+  padding: 50px 22px;
+  text-align: center;
+  background: radial-gradient(
+    ellipse at center, #ed23391a, transparent 70%
+  );
+}
+
+.heart {
+  color: var(--red);
+  font-size: 35px;
+  animation: heartbeat 1.5s infinite;
+}
+
+.final-love h2 {
+  margin: 18px 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 5vw, 45px);
+}
+
+.final-love h2 span { color: var(--pink); }
+
+footer {
+  padding: 30px 10px;
+  text-align: center;
+  color: #69758b;
+  font-size: 10px;
+  letter-spacing: 2px;
+  line-height: 2;
+}
+
+/* ANIMATIONS */
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes girlEnter {
+  from { opacity: 0; transform: translateY(15px) scale(.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes happyBob {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-3px) rotate(1deg); }
+}
+
+@keyframes happyBlink {
+  0%, 45%, 49%, 100% { transform: scaleY(1); }
+  47% { transform: scaleY(.1); }
+}
+
+@keyframes sparkle {
+  from { transform: rotate(-12deg) scale(.85); }
+  to { transform: rotate(12deg) scale(1.2); }
+}
+
+@keyframes angryShake {
+  0%, 100% { transform: translateX(0) rotate(0); }
+  25% { transform: translateX(-4px) rotate(-3deg); }
+  75% { transform: translateX(4px) rotate(3deg); }
+}
+
+@keyframes angerPop {
+  from { transform: rotate(-10deg) scale(.9); }
+  to { transform: rotate(10deg) scale(1.15); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.15); }
+  30% { transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 20px 5%;
+    font-size: 9px;
+  }
+
+  .hero { padding-top: 45px; }
+  .car-wrap img { aspect-ratio: 4 / 3; }
+
+  .section {
+    padding: 20px 16px;
+    margin: 35px 0;
+  }
+
+  .answers { gap: 8px; }
+  .answer { font-size: 10px; }
+
+  .girl-card {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .avatar {
+    transform: scale(.82);
+    transform-origin: center;
+    margin: -10px -10px;
+  }
+
+  .girl-card h3 { font-size: 19px; }
+  .girl-card p { font-size: 11px; }
+  .mood { font-size: 8px; letter-spacing: 1px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="ambient"></div>
+
+<nav>
+  <div class="brand">♥ THE DAILY EDITION</div>
+  <div class="nav-right">EST. WITH LOVE · 001</div>
+</nav>
+
+<main class="page">
+
+  <!-- WELCOME PAGE -->
+
+  <header class="hero">
+    <div class="eyebrow">Your personal morning briefing</div>
+
+    <h1>Good morning,<br><span>handsome.</span></h1>
+
+    <p class="subtitle">
+      A little reminder from your favourite girl.<br>
+      Your day starts here. ❤️
+    </p>
+
+    <div class="car-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1600&q=85"
+        alt="Red luxury sports car"
+      >
+      <div class="car-caption">
+        <strong>YOUR MORNING. YOUR RULES.</strong>
+        <small>EUROPEAN PERFORMANCE · DAILY EDITION</small>
+      </div>
+    </div>
+
+    <button class="cta" onclick="startCheckin()">
+      START YOUR CHECK-IN ↗
+    </button>
+  </header>
+
+  <!-- QUESTION 1 -->
+
+  <section class="section" id="breakfast">
+    <div class="section-top">
+      <div class="number">01</div>
+      <div>
+        <h2>Fuel your engine.</h2>
+        <div class="description">
+          Even the best machines need fuel.
+        </div>
+      </div>
+    </div>
+
+    <div class="question">Did you have breakfast today?</div>
+
+    <p class="description">
+      Be honest with me, handsome. Your health matters to me.
+    </p>
+
+    <div class="answers">
+      <button class="answer yes" id="yesBtn"
+              onclick="chooseBreakfast(true)">
+        ✓ YES, I DID
+      </button>
+
+      <button class="answer no" id="noBtn"
+              onclick="chooseBreakfast(false)">
+        ✕ NO, I DIDN'T
+      </button>
+    </div>
+
+    <!-- HAPPY CARTOON -->
+
+    <div class="girl-card happy" id="happyCard">
+      <div class="avatar happy-avatar">
+        <div class="hair"></div>
+        <div class="face">
+          <div class="bangs"></div>
+          <div class="eyebrows">
+            <span></span><span></span>
+          </div>
+          <div class="eyes">
+            <span></span><span></span>
+          </div>
+          <div class="blush blush-left"></div>
+          <div class="blush blush-right"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="neck"></div>
+        <div class="body"></div>
+        <div class="sparkle">♥</div>
+      </div>
+
+      <div class="girl-message">
+        <div class="mood">♥ GIRLFRIEND APPROVED</div>
+        <h3>That's my handsome boy!</h3>
+        <p>
+          I'm so proud of you for eating breakfast!
+          Keep taking care of yourself, handsome.
+          You deserve to feel amazing today.
+          Sending you a big kiss! 💗
+        </p>
+      </div>
+    </div>
+
+    <!-- ANGRY CARTOON -->
+
+    <div class="girl-card angry" id="angryCard">
+      <div class="avatar angry-avatar">
+        <div class="hair"></div>
+        <div class="face">
+          <div class="bangs"></div>
+          <div class="eyebrows">
+            <span></span><span></span>
+          </div>
+          <div class="eyes">
+            <span></span><span></span>
+          </div>
+          <div class="blush blush-left"></div>
+          <div class="blush blush-right"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="neck"></div>
+        <div class="body"></div>
+        <div class="anger-symbol">💢</div>
+      </div>
+
+      <div class="girl-message">
+        <div class="mood">⚠ GIRLFRIEND WARNING</div>
+        <h3>EXCUSE ME, SIR?! 😤</h3>
+        <p>
+          HANDSOME! We are NOT doing this today!
+          You need to eat properly! You can't run on
+          an empty tank. I care about you, so please
+          go get something to eat.
+          Your girlfriend is watching you! ❤️
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUESTION 2 -->
+
+  <section class="section" id="foodLog">
+    <div class="section-top">
+      <div class="number">02</div>
+      <div>
+        <h2>The breakfast log.</h2>
+        <div class="description">
+          Every champion has a routine.
+        </div>
+      </div>
+    </div>
+
+    <div class="question" style="font-size:27px">
+      What did you have for breakfast?
+    </div>
+
+    <p class="description">
+      Tell me what you ate, handsome. I want to know
+      how your morning is going.
+    </p>
+
+    <textarea id="breakfastLog"
+      placeholder="I had eggs, toast, fruit..."></textarea>
+
+    <button class="cta" onclick="saveBreakfast()">
+      SAVE MY ANSWER ↗
+    </button>
+
+    <p class="status" id="saveStatus"></p>
+  </section>
+
+  <!-- QUESTION 3 -->
+
+  <section class="section">
+    <div class="section-top">
+      <div class="number">03</div>
+      <div>
+        <h2 class="blue">Your daily reset.</h2>
+        <div class="description">
+          Take a moment for yourself.
+        </div>
+      </div>
+    </div>
+
+    <div class="breath-card">
+      <div class="eyebrow blue">Pause. Breathe. Reset.</div>
+
+      <div class="breath-circle" id="breathCircle">
+        <span id="breathText">READY?</span>
+      </div>
+
+      <div class="reminder">
+        Everything is going to be okay.
+        You are capable of more than you realise.
+        Take a breath, trust yourself, and remember
+        that you've got this.
+      </div>
+
+      <p class="description">
+        You don't have to figure everything out today.
+        Just take it one step at a time.
+      </p>
+
+      <button class="cta" style="background:#2879c5"
+              id="breathButton" onclick="breathe()">
+        TAKE A BREATH
+      </button>
+
+      <p class="status" id="breathStatus"></p>
+    </div>
+  </section>
+
+  <!-- QUESTION 4 -->
+
+  <section class="final-love">
+    <div class="eyebrow">And one last thing...</div>
+
+    <div class="heart">♥</div>
+
+    <h2>I love you,<br><span>handsome.</span></h2>
+
+    <p class="subtitle">
+      I hope today brings you good news, peaceful moments,
+      reasons to smile, and reminders of how amazing you are.
+      <br><br>
+      No matter how busy life gets, I am always cheering for you.
+      Believe in yourself the way I believe in you.
+      <br><br>
+      Have the best day, my love. ❤️
+    </p>
+
+    <div style="margin-top:30px;color:#ffb9d0;
+      font-family:'Playfair Display',serif;font-style:italic">
+      Forever your girl.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  MADE WITH LOVE, JUST FOR YOU ♥<br>
+  YOUR GIRL'S DAILY EDITION · ALWAYS IN YOUR CORNER
+</footer>
+
+<script>
+function startCheckin() {
+  document.getElementById('breakfast').scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+function chooseBreakfast(hadBreakfast) {
+  const happy = document.getElementById('happyCard');
+  const angry = document.getElementById('angryCard');
+
+  happy.classList.remove('visible');
+  angry.classList.remove('visible');
+
+  document.getElementById('yesBtn').classList.toggle(
+    'selected', hadBreakfast
+  );
+
+  document.getElementById('noBtn').classList.toggle(
+    'selected', !hadBreakfast
+  );
+
+  const selectedCard = hadBreakfast ? happy : angry;
+  selectedCard.classList.add('visible');
+
+  // Restart the cartoon's entrance animation.
+  const avatar = selectedCard.querySelector('.avatar');
+  avatar.style.animation = 'none';
+  void avatar.offsetWidth;
+  avatar.style.animation = '';
+
+  selectedCard.scrollIntoView({
+    behavior: 'smooth',
+    block: 'nearest'
+  });
+}
+
+function saveBreakfast() {
+  const answer = document.getElementById('breakfastLog').value.trim();
+  const status = document.getElementById('saveStatus');
+
+  if (!answer) {
+    status.textContent =
+      'Tell me what you had first, handsome ❤️';
+    return;
+  }
+
+  try {
+    localStorage.setItem('boyfriendBreakfast', answer);
+    status.textContent =
+      'Saved on this device. Proud of you, handsome! ♥';
+  } catch (error) {
+    status.textContent =
+      'Your answer is written above. ♥';
+  }
+}
+
+let breathing = false;
+let breathTimers = [];
+
+function breathe() {
+  if (breathing) return;
+
+  breathing = true;
+
+  const circle = document.getElementById('breathCircle');
+  const label = document.getElementById('breathText');
+  const status = document.getElementById('breathStatus');
+  const button = document.getElementById('breathButton');
+
+  button.disabled = true;
+  button.style.opacity = '.6';
+
+  status.textContent =
+    'Follow the circle. Breathe gently at your own pace.';
+
+  const steps = [
+    { text: 'BREATHE IN', expand: true, duration: 4000 },
+    { text: 'BREATHE OUT', expand: false, duration: 6000 },
+    { text: 'BREATHE IN', expand: true, duration: 4000 },
+    { text: 'BREATHE OUT', expand: false, duration: 6000 },
+    { text: 'BREATHE IN', expand: true, duration: 4000 },
+    { text: 'BREATHE OUT', expand: false, duration: 6000 }
+  ];
+
+  let index = 0;
+
+  function nextStep() {
+    const step = steps[index];
+
+    label.textContent = step.text;
+    circle.classList.toggle('breathe', step.expand);
+
+    const timer = setTimeout(() => {
+      index++;
+
+      if (index < steps.length) {
+        nextStep();
+      } else {
+        breathing = false;
+        circle.classList.remove('breathe');
+        label.textContent = 'YOU GOT THIS';
+        status.textContent =
+          'Three gentle breathing cycles completed. One step at a time. ❤️';
+        button.disabled = false;
+        button.style.opacity = '1';
+      }
+    }, step.duration);
+
+    breathTimers.push(timer);
+  }
+
+  nextStep();
+}
+
+// Restore the note in the same browser when possible.
+try {
+  document.getElementById('breakfastLog').value =
+    localStorage.getItem('boyfriendBreakfast') || '';
+} catch (error) {
+  // The journal still works if local storage is unavailable.
+}
+</script>
+
+</body>
+</html>
+```
